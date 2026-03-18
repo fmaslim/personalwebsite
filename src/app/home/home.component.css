@@ -96,3 +96,17 @@ button {
         font-size: 17px;
     }
 }
+
+.external-link {
+    color: #0000ee;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    .external-link:visited {
+        color: #551a8b;
+    }
+
+    .external-link:hover {
+        color: #0000cc;
+    }

@@ -35,17 +35,37 @@
             color: black;
         }
 
-/*.navbar {
-    padding: 16px 32px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #555;
-    font-size: 14px;
-    font-weight: 500;
+.logo {
+    font-size: 28px;
+    font-weight: bold;
 }
 
-    .nav-links a:hover {
-        color: #111;
-    }*/
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+
+        .nav-links a:hover {
+            color: #0078d4;
+        }
+
+        .nav-links a.active {
+            color: #0078d4;
+            border-bottom: 2px solid #0078d4;
+            padding-bottom: 4px;
+        }
