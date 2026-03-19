@@ -174,3 +174,13 @@
     gap: 0.85rem;
     margin-top: 1rem;
 }
+
+.banner-image {
+    width: 100%;
+    max-width: 900px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 2.5rem;
+    border-radius: 24px;
+}

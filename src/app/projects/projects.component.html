@@ -1,9 +1,11 @@
 <section class="page-section">
-    <div class="banner-small"></div>
+    <img [src]="bannerUrl" [alt]="bannerAlt" class="banner-image">
 
     <div class="page-header">
-        <h1>Projects</h1>
-        <p>A selection of work focused on systems, structure, and practical engineering.</p>
+        <h1>{{ pageTitle }}</h1>
+        <p>{{ pageSubTitle }}</p>
+        <button (click)="toggleFeatured()">Toggle Featured Project</button>
+        <p *ngIf="showFeatured">Featured Project: {{ featuredProject }}</p>
     </div>
 
     <div class="projects-grid">
