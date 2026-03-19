@@ -7,6 +7,10 @@
         <button (click)="toggleFeatured()">Toggle Featured Project</button>
         <p *ngIf="showFeatured">Featured Project: {{ featuredProject }}</p>
     </div>
+    <div>
+        <input [(ngModel)]="projectName" placeholder="Enter project name">
+        <p>{{ projectName }}</p>
+    </div>
 
     <div class="projects-grid">
         <div class="project-card featured-project">
