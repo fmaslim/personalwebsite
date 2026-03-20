@@ -22,12 +22,12 @@
     </div>
     <!-- use ngFor -->
     <div class="projects-grid">
-        <div class="project-card" 
-             *ngFor="let project of projects" 
+        <div class="project-card"
+             *ngFor="let project of projects"
              (click)="setSelectedProject(project)"
              [class.feature-selected]="project===selectedProject">
             <h2>{{ project.title }}</h2>
-            
+
             <p class="project-description">
                 {{ project.description }}
             </p>
@@ -44,6 +44,38 @@
                 <a [href]="project.github" target="_blank">GitHub</a>
                 <a *ngIf="project.caseStudy" [href]="project.caseStudy" target="_blank">Case Study</a>
             </div>
+
+            <section class="projects-page">
+                <h2>Projects</h2>
+                <app-project-card
+                  [title]="project.title"
+                  [description]="project.description"
+                  [image]="project.image"
+                  [github]="project.github"
+                                  ></app-project-card>
+            </section>            
         </div>
+    </div>    
+</section>
+<section>
+    <h2>Employees</h2>
+
+    <div class="employee-list">
+        <app-employee-card *ngFor="let employee of employees"
+                           [employee]="employee">
+        </app-employee-card>
+    </div>
+    
+    <div>
+        <app-product-card *ngFor="let product of products"
+                          [product]="product">
+        </app-product-card>
+    </div>
+
+    <div>
+        <app-book-card *ngFor="let book of books"
+                       [book]="book">
+
+        </app-book-card>
     </div>
 </section>

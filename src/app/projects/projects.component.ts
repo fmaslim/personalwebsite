@@ -18,7 +18,8 @@ export class ProjectsComponent {
             tags: ['Azure', '.NET', 'Bicep', 'SQL', 'CI/CD'],
             proof: 'Demonstrates cloud architecture thinking, structured environment design, and practical platform engineering fundamentals.',
             github: '#',
-            caseStudy: '#'
+            caseStudy: '#',
+            image: '/website-banner.png',
         }, 
         {
             title: 'Personal Website',
@@ -26,7 +27,8 @@ export class ProjectsComponent {
             tags: ['Angular', 'TypeScript', 'CSS'],
             proof: 'Demonstrates front-end structure, routing, reusable layouts, and visual polish.',
             github: '#',
-            caseStudy: '#'
+            caseStudy: '#',
+            image: '/website-banner.png',
         },
         {
             title: '.NET API Training Lab',
@@ -34,8 +36,75 @@ export class ProjectsComponent {
             tags: ['.NET', 'C#', 'Web API', 'Swagger', 'SQL'],
             proof: 'Demonstrates clean API structure, separation of concerns, and realistic backend development workflow.',
             github: '#',
-            caseStudy: ''
+            caseStudy: '',
+            image: '/website-banner.png',
         }
+    ];
+    employees = [
+        {
+            name: 'Alice Johnson',
+            role: 'Frontend developer',
+            department: 'IT'
+        },
+        {
+            name: 'Bob Smith',
+            role: 'Backend developer',
+            department: 'IT'
+        },
+        {
+            name: 'Carol Davis',
+            role: 'QA engineer',
+            department: 'Quality'
+        },
+        {
+            name: 'David Lee',
+            role: 'Project Manager',
+            department: 'Management'
+        },
+    ];
+    products = [
+        {
+            name: 'Laptop',
+            price: 1200,
+            category: 'Electronics'
+        },
+        {
+            name: 'Phone',
+            price: 800,
+            category: 'Electronics'
+        },
+        {
+            name: 'Desk Chair',
+            price: 250,
+            category: 'Furniture'
+        },
+        {
+            name: 'Monitor',
+            price: 300,
+            category: 'Electronics'
+        }
+    ];
+    books = [
+        {
+            title: 'Atomic Habits',
+            author: 'James Clear',
+            genre: 'Self-help',
+        },
+        {
+            title: 'Deep Work',
+            author: 'Cal Newport',
+            genre: 'Productivity',
+        },
+        {
+            title: 'Clean Code',
+            author: 'Robert C Martin',
+            genre: 'Programming',
+        },
+        {
+            title: 'The Pragmatic Programmer',
+            author: 'Andrew Hunt',
+            genre: 'Programming',
+        },
     ];
 
     selectedProject = this.projects[0];

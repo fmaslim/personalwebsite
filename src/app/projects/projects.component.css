@@ -189,3 +189,12 @@
     border: 2px solid #1d4ed8;
     transform: translateY(-2px);
 }
+
+.employee-list {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    gap: 0.75rem;
+    justify-content: start;
+}
+
+grid-template-columns: repeat(4, 240px);
