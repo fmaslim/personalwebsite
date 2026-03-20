@@ -5,7 +5,16 @@
         <h1>{{ pageTitle }}</h1>
         <p>{{ pageSubTitle }}</p>
         <button (click)="toggleFeatured()">Toggle Featured Project</button>
-        <p *ngIf="showFeatured">Featured Project: {{ featuredProject }}</p>
+        <p>Featured Project: {{ selectedProject.title }}</p>
+        <p>{{ selectedProject.description }}</p>
+        <div class="tech-tags">
+            <span *ngFor="let tag of selectedProject.tags">
+                {{ tag }}
+            </span>
+        </div>
+        <div class="project-proof">
+            {{ selectedProject.proof }}
+        </div>
     </div>
     <div>
         <input [(ngModel)]="projectName" placeholder="Enter project name">
@@ -13,7 +22,10 @@
     </div>
     <!-- use ngFor -->
     <div class="projects-grid">
-        <div class="project-card" *ngFor="let project of projects">
+        <div class="project-card" 
+             *ngFor="let project of projects" 
+             (click)="setSelectedProject(project)"
+             [class.feature-selected]="project===selectedProject">
             <h2>{{ project.title }}</h2>
             
             <p class="project-description">

@@ -184,3 +184,8 @@
     margin: 0 auto 2.5rem;
     border-radius: 24px;
 }
+
+.feature-selected {
+    border: 2px solid #1d4ed8;
+    transform: translateY(-2px);
+}
