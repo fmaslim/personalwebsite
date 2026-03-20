@@ -11,81 +11,26 @@
         <input [(ngModel)]="projectName" placeholder="Enter project name">
         <p>{{ projectName }}</p>
     </div>
-
+    <!-- use ngFor -->
     <div class="projects-grid">
-        <div class="project-card featured-project">
-            <h2>Contoso Public Health IT</h2>
+        <div class="project-card" *ngFor="let project of projects">
+            <h2>{{ project.title }}</h2>
+            
             <p class="project-description">
-                A simulated enterprise Azure environment built to practice real-world architecture,
-                naming conventions, Dev/Prod structure, and deployment flow.
+                {{ project.description }}
             </p>
 
             <div class="tech-tags">
-                <span>Azure</span>
-                <span>.NET</span>
-                <span>Bicep</span>
-                <span>SQL</span>
-                <span>CI/CD</span>
+                <span *ngFor="let tag of project.tags">{{ tag }}</span>
             </div>
 
-            <p class="project-proof">
-                Demonstrates cloud architecture thinking, structured environment design,
-                and practical platform engineering fundamentals.
-            </p>
+            <div class="project-proof">
+                {{ project.proof }}
+            </div>
 
             <div class="project-links">
-                <a href="#" target="_blank">GitHub</a>
-                <a href="#" target="_blank">Case Study</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h2>Personal Website</h2>
-            <p class="project-description">
-                A premium Angular portfolio site designed to present my work, personal brand,
-                and technical growth in a clean, structured way.
-            </p>
-
-            <div class="tech-tags">
-                <span>Angular</span>
-                <span>TypeScript</span>
-                <span>CSS</span>
-                <span>Routing</span>
-            </div>
-
-            <p class="project-proof">
-                Demonstrates component-based UI design, routing, layout structure,
-                and polished front-end presentation.
-            </p>
-
-            <div class="project-links">
-                <a href="#" target="_blank">GitHub</a>
-                <a href="#" target="_blank">Live Site</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h2>.NET API Training Lab</h2>
-            <p class="project-description">
-                A hands-on API practice project focused on DTOs, service layers, controllers,
-                validation, and realistic backend design patterns.
-            </p>
-
-            <div class="tech-tags">
-                <span>.NET</span>
-                <span>C#</span>
-                <span>Web API</span>
-                <span>Swagger</span>
-                <span>SQL</span>
-            </div>
-
-            <p class="project-proof">
-                Demonstrates clean API structure, separation of concerns,
-                and realistic backend development workflow.
-            </p>
-
-            <div class="project-links">
-                <a href="#" target="_blank">GitHub</a>
+                <a [href]="project.github" target="_blank">GitHub</a>
+                <a *ngIf="project.caseStudy" [href]="project.caseStudy" target="_blank">Case Study</a>
             </div>
         </div>
     </div>
