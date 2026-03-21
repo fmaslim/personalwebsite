@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { MovieService } from '../services/movie.service';
+import { BookService } from '../services/book.service';
+import { ProductService } from '../services/product.service';
+import { EmployeeService } from '../services/employee.service';
 
 @Component({
   selector: 'app-projects',
@@ -183,5 +187,19 @@ export class ProjectsComponent {
     onEmployeeSelected_parent(employee: any) {
         this.selectedEmployee = employee;
         console.log('Selected employee:', employee);
+    }
+
+    //movies_svc_arr: any[] = [];
+    selectedMovie_svc_arr: any = null;
+    constructor(
+        private movieService: MovieService,
+        private bookService: BookService,
+        private productService: ProductService,
+        private employeeService: EmployeeService)
+    {
+        this.movies = this.movieService.getMovies();
+        this.books = this.bookService.getBooks();
+        this.products = this.productService.getProducts();
+        this.employees = this.employeeService.getEmployees();
     }
 }
