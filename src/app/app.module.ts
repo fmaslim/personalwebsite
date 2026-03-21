@@ -14,6 +14,7 @@ import { AppEmployeeCardComponent } from './components/app-employee-card/app-emp
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { Movie2CardComponent } from './components/movie2-card/movie2-card.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
     AppEmployeeCardComponent,
     ProductCardComponent,
     BookCardComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    Movie2CardComponent
   ],
   imports: [
     BrowserModule,

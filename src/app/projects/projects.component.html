@@ -66,7 +66,7 @@
                            class="project-card">
         </app-employee-card>
     </div>
-    
+
     <div class="employee-list projects-grid">
         <app-product-card *ngFor="let product of products"
                           [product]="product"
@@ -81,10 +81,21 @@
         </app-book-card>
     </div>
 
+    <p *ngIf="selectedMovie">
+        Selected movie: {{ selectedMovie.title }}
+    </p>
     <div class="employee-list projects-grid">
         <app-movie-card *ngFor="let movie of movies"
                         [movie]="movie"
-                        class="project-card">
+                        class="project-card"
+                        (movieSelected)="onMovieSelected($event)">
         </app-movie-card>
+    </div>
+
+    <div class="employee-list projects-grid">
+        <app-movie2-card *ngFor="let movie of movies2"
+                         [movie]="movie"
+                         class="project-card">
+        </app-movie2-card>
     </div>
 </section>

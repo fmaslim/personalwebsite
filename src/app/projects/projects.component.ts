@@ -114,12 +114,12 @@ export class ProjectsComponent {
         },
         {
             title: 'Interstellar',
-            director: 'Christopher Nolan',
+            director: 'Franky Lin',
             genre: 'Sci-Fi',
         },
         {
             title: 'The Dark Knight',
-            director: 'Christopher Nolan',
+            director: 'Sarah Lee',
             genre: 'Action',
         },
         {
@@ -128,12 +128,29 @@ export class ProjectsComponent {
             genre: 'Animation',
         },
     ];
+    movies2 = [
+        {
+            title: 'Inception',
+            genre: 'Sci-Fi',
+            year: '2010'
+        },
+        {
+            title: 'The Dark Knight',
+            genre: 'Action',
+            year: '2008'
+        },
+        {
+            title: 'Interstellar',
+            genre: 'Sci-Fi',
+            year: '2014'
+        },
+    ];
 
     selectedProject = this.projects[0];
 
     bannerUrl = '/website-banner-2.png';
     bannerAlt = 'Cloud computing and workspace banner';
-
+    selectedMovie: any = null;
     showFeatured = true;
 
     toggleFeatured() {
@@ -142,5 +159,10 @@ export class ProjectsComponent {
 
     setSelectedProject(project: any) {
         this.selectedProject = project;
+    }
+
+    onMovieSelected(movie: any) {
+        this.selectedMovie = movie;
+        console.log('Selected movie:', movie);
     }
 }
