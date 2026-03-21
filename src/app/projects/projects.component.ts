@@ -180,7 +180,7 @@ export class ProjectsComponent {
         console.log('Selected product:', product);
     }
 
-    onEmployeeSelected(employee: any) {
+    onEmployeeSelected_parent(employee: any) {
         this.selectedEmployee = employee;
         console.log('Selected employee:', employee);
     }

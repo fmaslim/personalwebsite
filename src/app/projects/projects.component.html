@@ -66,7 +66,7 @@
         <app-employee-card *ngFor="let employee of employees"
                            [employee]="employee"
                            class="project-card"
-                           (employeeSelected_child)="onEmployeeSelected($event)">
+                           (employeeSelected_child)="onEmployeeSelected_parent($event)">
         </app-employee-card>
     </div>
 
