@@ -59,7 +59,6 @@
 </section>
 <section>
     <h2>Employees</h2>
-
     <div class="employee-list projects-grid">
         <app-employee-card *ngFor="let employee of employees"
                            [employee]="employee"
@@ -67,20 +66,31 @@
         </app-employee-card>
     </div>
 
+    <h2>Products</h2>
+    <p *ngIf="selectedProduct">
+        Selected Product: {{ selectedProduct.name }}
+    </p>
     <div class="employee-list projects-grid">
         <app-product-card *ngFor="let product of products"
                           [product]="product"
-                          class="project-card">
+                          class="project-card"
+                          (productSelected_child)="onProductSelected_parent($event)">
         </app-product-card>
     </div>
 
+    <h2>Books</h2>
+    <p *ngIf="selectedBook">
+        Selected Book: {{ selectedBook.title }}
+    </p>
     <div class="employee-list projects-grid">
         <app-book-card *ngFor="let book of books"
                        [book]="book"
-                       class="project-card">
+                       class="project-card"
+                       (bookSelected_child)="onBookSelected_parent($event)">
         </app-book-card>
     </div>
 
+    <h2>Movies</h2>
     <p *ngIf="selectedMovie">
         Selected movie: {{ selectedMovie.title }}
     </p>
@@ -92,6 +102,7 @@
         </app-movie-card>
     </div>
 
+    <h2>Movies 2</h2>
     <div class="employee-list projects-grid">
         <app-movie2-card *ngFor="let movie of movies2"
                          [movie]="movie"

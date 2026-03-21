@@ -149,9 +149,12 @@ export class ProjectsComponent {
     selectedProject = this.projects[0];
 
     bannerUrl = '/website-banner-2.png';
-    bannerAlt = 'Cloud computing and workspace banner';
-    selectedMovie: any = null;
+    bannerAlt = 'Cloud computing and workspace banner';    
     showFeatured = true;
+
+    selectedMovie: any = null;
+    selectedBook: any = null;
+    selectedProduct: any = null;
 
     toggleFeatured() {
         this.showFeatured = !this.showFeatured;
@@ -164,5 +167,15 @@ export class ProjectsComponent {
     onMovieSelected(movie: any) {
         this.selectedMovie = movie;
         console.log('Selected movie:', movie);
+    }
+
+    onBookSelected_parent(book: any) {
+        this.selectedBook = book;
+        console.log('Selected book:', book);
+    }
+
+    onProductSelected_parent(product: any) {
+        this.selectedProduct = product;
+        console.log('Selected product:', product);
     }
 }
