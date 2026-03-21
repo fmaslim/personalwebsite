@@ -59,10 +59,14 @@
 </section>
 <section>
     <h2>Employees</h2>
+    <p *ngIf="selectedEmployee">
+        Selected Employee: {{ selectedEmployee.name }}
+    </p>
     <div class="employee-list projects-grid">
         <app-employee-card *ngFor="let employee of employees"
                            [employee]="employee"
-                           class="project-card">
+                           class="project-card"
+                           (employeeSelected_child)="onEmployeeSelected($event)">
         </app-employee-card>
     </div>
 

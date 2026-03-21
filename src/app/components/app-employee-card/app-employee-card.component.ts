@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-employee-card',
@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class AppEmployeeCardComponent {
     @Input() employee: any;
+
+    @Output() employeeSelected_child = new EventEmitter<any>();
+
+    selectEmployee_child() {
+        this.employeeSelected_child.emit(this.employee);
+    }
 }

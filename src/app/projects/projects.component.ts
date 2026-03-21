@@ -155,6 +155,7 @@ export class ProjectsComponent {
     selectedMovie: any = null;
     selectedBook: any = null;
     selectedProduct: any = null;
+    selectedEmployee: any = null;
 
     toggleFeatured() {
         this.showFeatured = !this.showFeatured;
@@ -177,5 +178,10 @@ export class ProjectsComponent {
     onProductSelected_parent(product: any) {
         this.selectedProduct = product;
         console.log('Selected product:', product);
+    }
+
+    onEmployeeSelected(employee: any) {
+        this.selectedEmployee = employee;
+        console.log('Selected employee:', employee);
     }
 }
