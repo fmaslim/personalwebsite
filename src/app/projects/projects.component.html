@@ -5,7 +5,7 @@
         <h1>{{ pageTitle }}</h1>
         <p>{{ pageSubTitle }}</p>
         <button (click)="toggleFeatured()">Toggle Featured Project</button>
-        <p>Featured Project: {{ selectedProject.title }}</p>
+        <p *ngIf="showFeatured">Featured Project: {{ selectedProject.title }}</p>
         <p>{{ selectedProject.description }}</p>
         <div class="tech-tags">
             <span *ngFor="let tag of selectedProject.tags">
@@ -60,22 +60,31 @@
 <section>
     <h2>Employees</h2>
 
-    <div class="employee-list">
+    <div class="employee-list projects-grid">
         <app-employee-card *ngFor="let employee of employees"
-                           [employee]="employee">
+                           [employee]="employee"
+                           class="project-card">
         </app-employee-card>
     </div>
     
-    <div>
+    <div class="employee-list projects-grid">
         <app-product-card *ngFor="let product of products"
-                          [product]="product">
+                          [product]="product"
+                          class="project-card">
         </app-product-card>
     </div>
 
-    <div>
+    <div class="employee-list projects-grid">
         <app-book-card *ngFor="let book of books"
-                       [book]="book">
-
+                       [book]="book"
+                       class="project-card">
         </app-book-card>
+    </div>
+
+    <div class="employee-list projects-grid">
+        <app-movie-card *ngFor="let movie of movies"
+                        [movie]="movie"
+                        class="project-card">
+        </app-movie-card>
     </div>
 </section>

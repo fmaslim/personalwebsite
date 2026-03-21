@@ -106,6 +106,28 @@ export class ProjectsComponent {
             genre: 'Programming',
         },
     ];
+    movies = [
+        {
+            title: 'Inception',
+            director: 'Christopher Nolan',
+            genre: 'Sci-Fi',
+        },
+        {
+            title: 'Interstellar',
+            director: 'Christopher Nolan',
+            genre: 'Sci-Fi',
+        },
+        {
+            title: 'The Dark Knight',
+            director: 'Christopher Nolan',
+            genre: 'Action',
+        },
+        {
+            title: 'Coco',
+            director: 'Pixar',
+            genre: 'Animation',
+        },
+    ];
 
     selectedProject = this.projects[0];
 

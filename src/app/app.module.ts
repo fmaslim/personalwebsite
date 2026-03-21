@@ -13,6 +13,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { AppEmployeeCardComponent } from './components/app-employee-card/app-employee-card.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { BookCardComponent } from './components/book-card/book-card.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BookCardComponent } from './components/book-card/book-card.component';
     ProjectCardComponent,
     AppEmployeeCardComponent,
     ProductCardComponent,
-    BookCardComponent
+    BookCardComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,
