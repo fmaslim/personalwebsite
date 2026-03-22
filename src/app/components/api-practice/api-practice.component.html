@@ -1,13 +1,5 @@
-<h2>HTTP Hello World</h2>
+<h2>HTTP API Practice</h2>
 
-<p *ngIf="loading">Loading todos...</p>
-<p *ngIf="error">{{ error }}</p>
-<pre *ngIf="debugError">{{ debugError }}</pre>
+<app-todo-demo></app-todo-demo>
+<app-products-demo></app-products-demo>
 
-<div class="todo-grid" *ngIf="!loading && !error">
-    <div class="todo-card" *ngFor="let todo_single of todo_many">
-        <p><strong>ID:</strong> {{ todo_single.id }}</p>
-        <p><strong>Title:</strong> {{ todo_single.title }}</p>
-        <p><strong>Completed:</strong> {{ todo_single.completed }}</p>
-    </div>
-</div>

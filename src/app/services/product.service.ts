@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { ProductResponse } from '../services/interfaces/Product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
+    productApiUrl = 'https://dummyjson.com/products';
 
-    constructor() { }
+    constructor(private httpClient: HttpClient) { }
 
     getProducts() {
         return [
@@ -30,5 +34,9 @@ export class ProductService {
                 category: 'Electronics'
             }
         ];
+    }
+
+    getProductsHttp(): Observable<ProductResponse> {
+        return this.httpClient.get<ProductResponse>(this.productApiUrl);
     }
 }

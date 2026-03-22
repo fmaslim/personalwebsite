@@ -17,6 +17,8 @@ import { BookCardComponent } from './components/book-card/book-card.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { Movie2CardComponent } from './components/movie2-card/movie2-card.component';
 import { ApiPracticeComponent } from './components/api-practice/api-practice.component';
+import { TodoDemoComponent } from './components/todo-demo/todo-demo.component';
+import { ProductsDemoComponent } from './components/products-demo/products-demo.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ApiPracticeComponent } from './components/api-practice/api-practice.com
     BookCardComponent,
     MovieCardComponent,
     Movie2CardComponent,
-    ApiPracticeComponent
+    ApiPracticeComponent,
+    TodoDemoComponent,
+    ProductsDemoComponent
   ],
   imports: [
     BrowserModule,
