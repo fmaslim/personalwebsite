@@ -10,19 +10,30 @@ import { TodoService } from '../../services/todo.service';
 export class ApiPracticeComponent {
     todo: Todo | null = null;
     todo_many: Todo[] = [];
-
+    loading = true;
+    error = '';
+    debugError = '';
     constructor(private todoService: TodoService) { }
 
-    ngOnInit()
-    {
-        this.todoService.getTodo().subscribe(data => {
-            this.todo = data;
-            console.log(data);
-        });
+    ngOnInit() {
+        this.loading = true;
+        this.error = '';
 
-        this.todoService.getTodo_Many().subscribe(data => {
-            this.todo_many = data.slice(0, 10);
-            console.log(this.todo_many);
+        this.todoService.getTodo_Many().subscribe({
+            next: (data) => {
+                setTimeout(() => {
+                    this.todo_many = data.slice(0, 50);
+                    this.loading = false;
+                    console.log(this.todo_many);
+                }, 5000);
+            },
+            error: (err) => {
+                console.error(err);
+                this.loading = false;
+                this.error = 'Failed to load todos.';
+                this.debugError = JSON.stringify(err);
+                this.debugError = `Status: ${err.status} | URL: ${err.url} | Message: ${err.message}`
+            }
         });
     }
 }

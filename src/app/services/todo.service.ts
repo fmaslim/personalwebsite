@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TodoService {
     private apiUrl = 'https://jsonplaceholder.typicode.com/todos/1';
-    private apiUrl_Many = 'https://jsonplaceholder.typicode.com/todos';
+    private apiUrl_Many = 'https://jsonplaceholder.typicode.com/todoss';
     constructor(private http: HttpClient) { }
 
     getTodo()
