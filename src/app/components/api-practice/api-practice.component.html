@@ -1,0 +1,21 @@
+<h2>HTTP Hello World</h2>
+
+<p *ngIf="todo">Title: {{ todo.title }}</p>
+<p *ngIf="todo">Completed: {{ todo.completed }}</p>
+
+<div class="todo-grid">
+    <div class="todo-card" *ngFor="let todo_single of todo_many">
+        <p>
+            <strong>ID:</strong>
+            {{ todo_single.id }}
+        </p>
+        <p>
+            <strong>Title:</strong>
+            {{ todo_single.title }}
+        </p>
+        <p>
+            <strong>Completed:</strong>
+            {{ todo_single.completed }}
+        </p>
+    </div>
+</div>
