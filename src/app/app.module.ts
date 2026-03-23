@@ -19,6 +19,8 @@ import { Movie2CardComponent } from './components/movie2-card/movie2-card.compon
 import { ApiPracticeComponent } from './components/api-practice/api-practice.component';
 import { TodoDemoComponent } from './components/todo-demo/todo-demo.component';
 import { ProductsDemoComponent } from './components/products-demo/products-demo.component';
+import { TemplateFormsDemoComponent } from './components/template-forms-demo/template-forms-demo.component';
+import { TodoHttpPracticeComponent } from './components/todo-http-practice/todo-http-practice.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ProductsDemoComponent } from './components/products-demo/products-demo.
     Movie2CardComponent,
     ApiPracticeComponent,
     TodoDemoComponent,
-    ProductsDemoComponent
+    ProductsDemoComponent,
+    TemplateFormsDemoComponent,
+    TodoHttpPracticeComponent
   ],
   imports: [
     BrowserModule,
