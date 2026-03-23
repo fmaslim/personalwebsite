@@ -26,7 +26,7 @@ export class TodoDemoComponent implements OnInit {
                     this.todo_many = data.slice(0, 50);
                     this.loading = false;
                     console.log(this.todo_many);
-                }, 5000);
+                }, 2000);
             },
             error: (err) => {
                 console.error(err);

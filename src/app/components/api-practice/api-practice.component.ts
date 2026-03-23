@@ -13,6 +13,7 @@ export class ApiPracticeComponent {
     //loading = true;
     //error = '';
     //debugError = '';
+    component: string = '';
     constructor(private todoService: TodoService) { }
 
     ngOnInit() {
