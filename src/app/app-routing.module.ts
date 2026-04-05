@@ -9,6 +9,7 @@ import { TemplateFormsDemoComponent } from './components/template-forms-demo/tem
 import { TodoHttpPracticeComponent } from './components/todo-http-practice/todo-http-practice.component';
 import { UserDemoComponent } from './components/user-demo/user-demo.component';
 import { Products2DemoComponent } from './components/products2-demo/products2-demo.component';
+import { SandboxComponent } from './components/sandbox/sandbox.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
     { path: 'todo-http', component: TodoHttpPracticeComponent },
     { path: 'users', component: UserDemoComponent },
     { path: 'products2', component: Products2DemoComponent },
+    { path: 'sandbox', component: SandboxComponent },
 ];
 
 @NgModule({

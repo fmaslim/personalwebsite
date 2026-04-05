@@ -23,6 +23,7 @@ import { TemplateFormsDemoComponent } from './components/template-forms-demo/tem
 import { TodoHttpPracticeComponent } from './components/todo-http-practice/todo-http-practice.component';
 import { UserDemoComponent } from './components/user-demo/user-demo.component';
 import { Products2DemoComponent } from './components/products2-demo/products2-demo.component';
+import { SandboxComponent } from './components/sandbox/sandbox.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { Products2DemoComponent } from './components/products2-demo/products2-de
     TemplateFormsDemoComponent,
     TodoHttpPracticeComponent,
     UserDemoComponent,
-    Products2DemoComponent
+    Products2DemoComponent,
+    SandboxComponent
   ],
   imports: [
     BrowserModule,
