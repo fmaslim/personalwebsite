@@ -20,10 +20,7 @@ import { ApiPracticeComponent } from './components/api-practice/api-practice.com
 import { TodoDemoComponent } from './components/todo-demo/todo-demo.component';
 import { ProductsDemoComponent } from './components/products-demo/products-demo.component';
 import { TemplateFormsDemoComponent } from './components/template-forms-demo/template-forms-demo.component';
-import { TodoHttpPracticeComponent } from './components/todo-http-practice/todo-http-practice.component';
-import { UserDemoComponent } from './components/user-demo/user-demo.component';
-// import { Products2DemoComponent } from './components/products2-demo/products2-demo.component';
-// import { SandboxComponent } from './components/sandbox/sandbox.component';
+// import { TodoHttpPracticeComponent } from './components/todo-http-practice/todo-http-practice.component';
 
 @NgModule({
   declarations: [
@@ -43,10 +40,7 @@ import { UserDemoComponent } from './components/user-demo/user-demo.component';
     TodoDemoComponent,
     ProductsDemoComponent,
     TemplateFormsDemoComponent,
-    TodoHttpPracticeComponent,
-    UserDemoComponent,
-    // Products2DemoComponent,
-    // SandboxComponent
+    // TodoHttpPracticeComponent,
   ],
   imports: [
     BrowserModule,
